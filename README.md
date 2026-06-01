@@ -1,83 +1,53 @@
-# drarancibia.cl — Sitio web completo
+# Clínica Misura — Sitio web completo
 
-Ecosistema web del Dr. Ignacio Arancibia (Clínica de Odontología Digital
-e Implantes, Viña del Mar).
+Ecosistema web de Clínica Misura (odontología digital, implantes y estética)
+del Dr. Ignacio Arancibia, Viña del Mar.
 
-## Estructura del sitio
+## Estructura
 
 ```
 /
-├── index.html             ← Landing principal (drarancibia.cl)
-├── implantes.html         ← drarancibia.cl/implantes.html
-├── casos.html             ← drarancibia.cl/casos.html
-├── testimonios.html       ← drarancibia.cl/testimonios.html
-└── images/                ← Todos los recursos visuales
+├── index.html             ← Landing principal
+├── implantes.html         ← /implantes.html
+├── casos.html             ← /casos.html
+├── testimonios.html       ← /testimonios.html
+└── images/
+    ├── logo_misura_iso_dark.png   ← isotipo M (azul, para fondos claros) — header y footer
+    ├── logo_misura_iso_light.png  ← isotipo M (crema, para fondos oscuros) — watermarks CTA
+    ├── logo_misura_full.png       ← logo completo (og:image / redes)
+    └── (fotos de casos, diagramas, logos de aseguradoras, etc.)
 ```
 
 ## Cómo subir al hosting
 
 1. Descomprime este ZIP.
-2. Sube TODOS los archivos y carpetas al directorio raíz del hosting
-   (donde actualmente está tu `index.html`). Sobrescribe los existentes.
-3. Listo. Las URLs quedan:
-   - https://drarancibia.cl/                    → landing
-   - https://drarancibia.cl/implantes.html      → implantes
-   - https://drarancibia.cl/casos.html          → casos clínicos
-   - https://drarancibia.cl/testimonios.html    → testimonios
+2. Sube TODO el contenido de la carpeta `sitio-completo/` a la raíz del hosting.
+   Sobrescribe lo existente.
+3. IMPORTANTE — imágenes que YA debes tener en tu hosting (no vienen en este ZIP):
+   - dr-arancibia.jpg, sobre-mi.jpeg
+   - cerec.png, implantes.png, tercerosmolares.png, odogeneral.png, Botox.png
+   - bciseguros.png, chilenaconsolidada.png, consorcio.jpeg, sura.png,
+     vidasecurity.png, vidacamara.png, metlifew.png
+   Cópialas a images/ desde tu respaldo si no están.
 
-## Sobre las imágenes
+## Dominios
 
-La carpeta `images/` incluye TODOS los recursos nuevos (logos, diagramas
-de implantes, fotos antes/después, etc.). Si en tu hosting actual ya
-tienes la carpeta `images/` con las fotos originales del doctor, la foto
-familiar, íconos de tratamientos y logos de aseguradoras, ESOS ARCHIVOS
-SE CONSERVAN — el ZIP solo añade los nuevos sin tocar los existentes.
+Ambos dominios (drarancibia.cl y el nuevo de Misura) pueden apuntar a este mismo
+sitio. Como las rutas internas son relativas (implantes.html, casos.html, etc.),
+funciona igual desde cualquier dominio. Solo configura el redireccionamiento en
+el panel de tu hosting para que ambos sirvan el mismo directorio.
 
-Archivos que la landing espera encontrar en `images/` y que NO vienen
-en este ZIP (porque deberían existir ya en tu hosting):
+## Marca
 
-- dr-arancibia.jpg            (foto del doctor)
-- sobre-mi.jpeg               (foto familiar)
-- cerec.png                   (ícono CEREC)
-- implantes.png               (ícono implantes)
-- tercerosmolares.png         (ícono terceros molares)
-- odogeneral.png              (ícono odontología general)
-- Botox.png                   (ícono botox)
-- bciseguros.png, chilenaconsolidada.png, consorcio.jpeg,
-  sura.png, vidasecurity.png, vidacamara.png, metlifew.png
-  (logos de aseguradoras)
+- Nombre: Clínica Misura (principal) · Dr. Ignacio Arancibia (secundario)
+- Azul Misura: #1d2c4b
+- Dorado: #c2a06a
+- Crema: #f1ede7
+- Tipografías: Fraunces (display) + Inter (texto)
 
-Si alguno NO está en el hosting, los íconos de tratamientos tienen
-fallback automático (se muestra un SVG genérico), pero las fotos del
-doctor y aseguradoras solo aparecerán cuando subas las imágenes.
+## Notas
 
-## Páginas y enlaces internos
-
-La navegación está pre-configurada:
-- Tratamientos      → #tratamientos (ancla en index)
-- Implantes         → implantes.html
-- Casos clínicos    → casos.html
-- Testimonios       → testimonios.html
-- Contacto          → #contacto (ancla en index)
-- Agenda Ahora      → Doctoralia (URL externa)
-
-WhatsApp:
-- Botón flotante presente en todas las páginas (esquina inferior derecha)
-- Enlace: wa.me/+56950743387
-
-Doctoralia:
-- URL: doctoralia.cl/ignacio-arancibia-aburto-2/dentista/vina-del-mar
-
-## Marca y diseño
-
-- Tipografías: Fraunces (display) + Inter (sans) — cargadas desde Google Fonts
-- Paleta: azul medianoche `#0d1b33` + acento dorado `#c4a574`
-- Logo: archivo `images/logo_icon_dark.png` (oscuro para fondos claros)
-        archivo `images/logo_icon_white.png` (blanco para fondos oscuros)
-
-## Soporte
-
-Si necesitas modificaciones futuras (textos, agregar casos, cambiar
-precios, actualizar año), basta con editar el HTML correspondiente.
-Todo el CSS está inline en cada archivo para facilitar edición sin
-dependencias externas.
+- Navegación unificada en las 4 páginas (6 enlaces: Tratamientos, Implantes,
+  Casos clínicos, Testimonios, Contacto, Agenda Ahora).
+- Mails: contacto@drarancibia.cl e ignacio@drarancibia.cl
+  (si migras el correo al dominio de Misura, actualízalos en el footer de las 4 páginas).
