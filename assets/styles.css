@@ -88,7 +88,7 @@ h1, h2, h3, h4 {
 }
 .brand { display: flex; align-items: center; gap: 13px; }
 .brand-logo { height: 46px; width: auto; display: block; }
-.footer-logo { height: 70px; width: auto; display: block; margin-bottom: 18px; filter: brightness(0) invert(1); opacity: 0.95; }
+.footer-logo { height: 76px; width: auto; display: block; margin-bottom: 18px; }
 .brand-mono {
   width: 42px; height: 42px; border-radius: 9px;
   background: var(--navy); color: var(--gold);
@@ -208,7 +208,8 @@ h1, h2, h3, h4 {
 /* Tarjetas con foto grande */
 .card-photo { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
 .card-photo-img { width: 100%; aspect-ratio: 16/11; overflow: hidden; background: var(--cream); }
-.card-photo-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.card-photo-img img { width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s var(--ease); }
+.card-photo-img img.pos-top { object-position: center 18%; }
 .card-photo:hover .card-photo-img img { transform: scale(1.05); }
 .card-photo h3 { padding: 24px 28px 0; }
 .card-photo p { padding: 0 28px; }
